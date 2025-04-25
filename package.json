@@ -20,11 +20,20 @@
     ".env": "link:.env",
     "@neondatabase/serverless": "^1.0.0",
     "@types/pg": "^8.11.14",
+    "bcrypt": "^5.1.1",
     "drizzle-kit": "^0.31.0",
     "drizzle-orm": "^0.43.1",
-    "install": "^0.13.0"
+    "hono": "^4.7.7",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.24.3"
   },
   "devDependencies": {
+    "@hono/node-server": "^1.14.1",
+    "@hono/prometheus": "^1.0.1",
+    "@hono/zod-validator": "^0.4.3",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.15.2",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3"
