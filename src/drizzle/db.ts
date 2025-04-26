@@ -3,7 +3,7 @@ import { drizzle, NeonHttpDatabase } from "drizzle-orm/neon-http";
 import { neon } from "@neondatabase/serverless";
 import * as schema from './schema';
 
-const databaseUrl = process.env.Database_URL as string;
+const databaseUrl = process.env.DATABASE_URL as string;
 if (!databaseUrl) throw new Error("DATABASE_URL is not set");
 
 const sql = neon(databaseUrl);
