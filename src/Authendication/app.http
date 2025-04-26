@@ -1,5 +1,4 @@
 ###
-
 POST http://localhost:8000/register
 Content-Type: application/json
 
@@ -19,7 +18,7 @@ POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "email": "sadiqueabdirahman@gmail.com",
+    "email": "abdirahman@gmail.com",
     "password": "kms@1234"
 }
 ###
@@ -27,23 +26,14 @@ POST http://localhost:8000/register
 Content-Type: application/json
 
 {
-  "email": "abdirahman@gmail.com",
-  "password": "kms@1234",
+  "email": "sadque@gmail.com",
+  "password": "kms@222",
   "gender": true,
   "age": 23,
-  "name": "abdirahman",
+  "name": "sadque",
   "phone": 1234567890,
-  "location": "somalia",
+  "location": "Riyadh",
   "date_of_birth": "2000-01-01"
 }
 
 ###
-POST http://localhost:3000/vehicle
-Content-Type: application/json
-
-{
-  "vehicle_id": 2,
-  "avalilability":"davailable"
-}
-###
-GET https://jsonplaceholder.typicode.com/posts/1

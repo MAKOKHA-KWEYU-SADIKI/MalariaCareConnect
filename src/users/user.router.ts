@@ -10,7 +10,7 @@ dotenv.config();
 export const userRouter = new Hono();
 
 //Get all users
-userRouter.get("/", listUsers);
+userRouter.get("/users", listUsers);
 
 //Get a single user
 userRouter.get("/user/:id", getUser);
