@@ -1,3 +1,4 @@
+you can view my ppt via: https://docs.google.com/presentation/d/1H4A3kVxiGPZJrYJI4wHcLz9h2oHdHj6b/edit#slide=id.p1
 Titlle: MalariaCareConnect(MCC)
 
 MalariaCareConnect is a robust API designed to streamline the connection between the patients, doctors and the administration in the context of malaria care. The API incorporate mechanism to protect data and ensure authorize access though the use of bcrypt for hashing password and jwt for token generation which will grant permission within a given time frame.
