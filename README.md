@@ -1,109 +1,36 @@
-🦟 MalariaCareConnect (MCC)
-MalariaCareConnect (MCC) is a modern healthcare management system that enables organizations to efficiently register, enroll, and monitor clients across multiple health programs (e.g., Malaria, TB, HIV).
-Built with security, scalability, and simplicity in mind.
+Titlle: MalariaCareConnect(MCC)
+MalariaCareConnect is a robust API designed to streamline the connection between the patients, doctors and the administration in the context of malaria care. The API incorporate mechanism to protect data and ensure authorize access though the use of bcrypt for hashing password and jwt for token generation which will grant permission within a given time frame.
 
-🚀 Features
-Create Health Programs – Manage different healthcare initiatives like Malaria, TB, HIV, etc.
+system offer:
+registration and login
+search for a client
+view and update profile
+expose client via API
+CRUD operation from admin side
 
-Client Registration – Securely register new clients into the system.
+technologies used:
+Node.js, Hono, drizzle-ORM, TypeScript, PostgreSQL with neone, REST Client
 
-Program Enrollment – Enroll clients in one or more health programs.
+Installation:
+I use pnpm as my package manager
+pnpm init to generate package.json file
+pnpm add drizzle-orm//installing drizzle
+pnpm i drizzle-kit @types/pg
+pnpm add -D tsx typescript
+pnpm add dotenv// which allow storage and use of environmental variables
+pnpm add -D @types/node
+pnpm tsc init // generate drizzle.config.ts file for configuration of my application
 
-Client Search – Easily find clients by name, email, or other identifiers.
-
-Client Profiles – View detailed client information and enrollment history.
-
-API Access – Securely expose client profiles to external systems.
-
-Full CRUD Operations – Create, Read, Update, Delete via authorized API endpoints.
-
-Security Measures – Password hashing, JWT authentication, role-based access control.
-
-🛠️ Technologies Used
-
-Technology	Description
-Node.js	Backend server environment
-Hono	Lightweight web framework
-TypeScript	Strong typing for better code
-PostgreSQL	Relational database
-Neon	Serverless PostgreSQL hosting
-Drizzle ORM	Database interaction (typesafe)
-JWT	Authentication token generation
-Bcrypt	Password hashing and security
-Dotenv	Environment variable management
-📂 Project Structure
-bash
-Copy
-Edit
-├── src/
-│   ├── Authendication/
-│   │   └── auth.router.ts
-│   ├── users/
-│   │   └── user.router.ts
-│   │   └── validator.ts
-│   ├── drizzle/
-│   │   ├── db.ts
-│   │   └── migrations/
-│   ├── middleware/
-│   │   └── middleWare.ts
-│   ├── index.ts
-├── .env
-├── package.json
-└── README.md
-🔒 Security
-All passwords are hashed with bcrypt before saving to the database.
-
-Endpoints are protected with JWT authentication.
-
-Role-based authorization ensures only permitted users can perform sensitive operations.
-
-Environment secrets are safely loaded using dotenv.
-
-⚙️ Installation & Setup
-bash
-Copy
-Edit
-# 1. Clone the project
-git clone https://github.com/your-username/MalariaCareConnect.git
-
-# 2. Navigate to the project directory
-cd MalariaCareConnect
-
-# 3. Install dependencies
-pnpm install
-
-# 4. Create a .env file
-# Example .env
-DATABASE_URL=your_database_url
-JWT_SECRET=your_jwt_secret
-EXPIRESIN=1h
-PORT=8000
-
-# 5. Run migrations (if any)
-# (Assuming drizzle migrations setup)
-
-# 6. Start the development server
-pnpm dev
-🛡️ API Authentication
-All protected routes require a valid JWT Token to access.
-You must include the token in the Authorization header like:
-
-bash
-Copy
-Edit
-Authorization: Bearer <your_token_here>
-📈 Future Enhancements
-Add client notifications via SMS/Email.
-
-Create an Admin Dashboard for easier client management.
-
-Integrate Machine Learning for client health risk predictions.
-
-Expand API to support external third-party apps.
-
-✨ Screenshots / Demo
-(Add API responses, Postman screenshots, or Swagger docs here if available.)
-
-🧑‍💻 Author
-Sadiki Makokha (Abdirahman Sadque)
-Passionate about creating tech-driven health solutions.
+ for Hono
+ pnpm add hono
+ pnpm add bcrypt
+ pnpm add jsonwebtoken
+ pnpm add typsript
+ pnpm add zod
+ pnpm add -D @hono/node-server
+ pnpm add -D @hono/zod-validator
+ pnpm add -D @types/bcrypt
+ pnpm add -D @types/jsonwebtoken
+ 
+ usage
+ when one log in that is if he/she exists in the system, a token is generated which grants him/her some preveleges based on the role. if admin,patient or a doctor
